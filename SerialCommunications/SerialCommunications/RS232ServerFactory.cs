@@ -4,7 +4,7 @@ namespace SerialCommunications
 {
     public sealed class RS232ServerFactory : ISerialPortServerFactory
     {
-        private const string PORT_NAME = "COM1";
+        private const string PORT_NAME = "COM3";
         private const int BAUD_RATE = 19200;
         private const Parity PARITY = Parity.None;
         private const int DATA_BITS = 8;

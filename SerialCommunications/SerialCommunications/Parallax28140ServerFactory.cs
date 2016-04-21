@@ -4,7 +4,7 @@ namespace SerialCommunications
 {
     public sealed class Parallax28140ServerFactory : ISerialPortServerFactory
     {
-        private const string PORT_NAME = "COM3";
+        private const string PORT_NAME = "COM6";
         private const int BAUD_RATE = 2400;
         private const Parity PARITY = Parity.None;
         private const int DATA_BITS = 8;

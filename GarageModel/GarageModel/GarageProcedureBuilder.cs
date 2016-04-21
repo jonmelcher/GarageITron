@@ -15,6 +15,8 @@ namespace GarageModel
             Command.CommandType = CommandType.StoredProcedure;
         }
 
+        public abstract void BuildCommand();
+
         public void SetConnection(SqlConnection connection)
         {
             Command.Connection = connection;
@@ -27,7 +29,5 @@ namespace GarageModel
             for (var i = 0; i < args.Length; ++i)
                 Command.Parameters[i].Value = args[i];
         }
-
-        public abstract void BuildCommand();
     }
 }
