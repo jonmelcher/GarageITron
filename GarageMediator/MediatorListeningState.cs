@@ -12,17 +12,12 @@
 
 
 using System;
-using System.Threading;
-using System.Threading.Tasks;
 
 
 namespace GarageMediator
 {
     internal sealed class MediatorListeningState : MediatorState
     {
-        private volatile bool _isRunning;
-        private Task _worker;
-
         // event to propogate upwards when a valid RFID tag has been scanned
         public static event Action<object, string> IDScanned;
 
@@ -32,39 +27,19 @@ namespace GarageMediator
         // constructor - sets up _worker task using context
         public MediatorListeningState(GarageMediator context)
         {
-            _isRunning = true;
             CurrentID = string.Empty;
-            _worker = Task.Run(GetWorkerAction(context));
+            context.RFIDCommunication.OnIDScan += RFIDCommunication_OnIDScan;
         }
 
         public override void Change(GarageMediator context)
         {
-            _isRunning = false;
+            context.RFIDCommunication.OnIDScan -= RFIDCommunication_OnIDScan;
             context.State = new MediatorProcessingState(context);
         }
 
-        public override void Kill(GarageMediator context)
+        private void RFIDCommunication_OnIDScan(string id)
         {
-            _isRunning = false;
-            _worker.Wait();
-            base.Kill(context);
-        }
-
-        private Action GetWorkerAction(GarageMediator context)
-        {
-            return () =>
-            {
-                while (_isRunning)
-                {
-                    ScanID(context.RFIDCommunication.CurrentID);
-                    Thread.Sleep(0);
-                }
-            };
-        }
-
-        private void ScanID(string id)
-        {
-            if (id == string.Empty || CurrentID != string.Empty)
+            if (string.IsNullOrWhiteSpace(id) || CurrentID != null)
                 return;
 
             CurrentID = id;

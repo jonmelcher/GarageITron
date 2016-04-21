@@ -13,7 +13,7 @@ using System;
 using System.Threading;
 using System.IO.Ports;
 using GenericContainers;
-
+using System.Threading.Tasks;
 
 namespace SerialCommunications
 {
@@ -26,33 +26,29 @@ namespace SerialCommunications
         private ThreadSafeQueue<byte> Incoming { get; set; }
         private ThreadSafeQueue<byte> Outgoing { get; set; }
 
-        public RS232Server(SerialPort port) : base(port) { }
+        public RS232Server(SerialPort port) : base(port)
+        {
+            Incoming = new ThreadSafeQueue<byte>();
+            Outgoing = new ThreadSafeQueue<byte>();
+        }
 
         public override void StartServer()
         {
             StopServer();
+            Incoming.Clear();
+            Outgoing.Clear();
 
-            Incoming = new ThreadSafeQueue<byte>();
-            Outgoing = new ThreadSafeQueue<byte>();
-
-            Reader = new Thread(ReaderProcess);
-            Reader.IsBackground = true;
-
-            Writer = new Thread(WriterProcess);
-            Writer.IsBackground = true;
-
-            Port.Open();
             _isRunning = true;
-
-            Reader.Start();
-            Writer.Start();
+            Port.Open();
+            Reader = Task.Run((Action)ReaderProcess);
+            Writer = Task.Run((Action)WriterProcess);
         }
 
         public override void StopServer()
         {
             _isRunning = false;
-            Reader?.Join();
-            Writer?.Join();
+            Reader?.Wait();
+            Writer?.Wait();
             Port.Close();
         }
 

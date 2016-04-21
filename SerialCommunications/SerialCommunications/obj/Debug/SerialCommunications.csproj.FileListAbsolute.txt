@@ -11,3 +11,10 @@ C:\Users\jmelcher\Downloads\GarageITron\SerialCommunications\SerialCommunication
 C:\Users\jmelcher\Downloads\GarageITron\SerialCommunications\SerialCommunications\bin\Debug\GenericContainers.pdb
 C:\Users\jmelcher\Downloads\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.dll
 C:\Users\jmelcher\Downloads\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.pdb
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.csprojResolveAssemblyReference.cache
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.dll
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.pdb
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\bin\Debug\SerialCommunications.dll
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\bin\Debug\SerialCommunications.pdb
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\bin\Debug\GenericContainers.dll
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\bin\Debug\GenericContainers.pdb

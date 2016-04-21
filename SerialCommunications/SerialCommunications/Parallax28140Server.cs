@@ -10,8 +10,9 @@
 
 
 using System;
-using System.Threading;
+using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Threading;
 
 
 namespace SerialCommunications
@@ -25,25 +26,21 @@ namespace SerialCommunications
 
         public Parallax28140Server(SerialPort port) : base(port) { }
 
+        public event Action<string> OnIDScan;
+
         public override void StartServer()
         {
             StopServer();
-
             Scanner = new RFIDScanner();
-
-            Reader = new Thread(ReaderProcess);
-            Reader.IsBackground = true;
-
             Port.Open();
             _isRunning = true;
-
-            Reader.Start();
+            Reader = new Task(ReaderProcess);
         }
 
         public override void StopServer()
         {
             _isRunning = false;
-            Reader?.Join();
+            Reader?.Wait();
             Port.Close();
         }
 

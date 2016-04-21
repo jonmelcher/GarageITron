@@ -11,7 +11,7 @@
 using System;
 using System.IO.Ports;
 using System.Threading;
-
+using System.Threading.Tasks;
 
 namespace SerialCommunications
 {
@@ -30,7 +30,7 @@ namespace SerialCommunications
         public abstract void StopServer();
 
         protected SerialPort Port { get; set; }
-        protected Thread Reader { get; set; }
-        protected Thread Writer { get; set; }
+        protected Task Reader { get; set; }
+        protected Task Writer { get; set; }
     }
 }
