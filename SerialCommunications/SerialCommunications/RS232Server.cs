@@ -11,9 +11,9 @@
 
 using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.IO.Ports;
 using GenericContainers;
-using System.Threading.Tasks;
 
 
 namespace SerialCommunications
@@ -27,22 +27,23 @@ namespace SerialCommunications
         private ThreadSafeQueue<byte> Incoming { get; set; }
         private ThreadSafeQueue<byte> Outgoing { get; set; }
 
-        internal RS232Server(SerialPort port) : base(port)
-        {
-            Incoming = new ThreadSafeQueue<byte>();
-            Outgoing = new ThreadSafeQueue<byte>();
-        }
-        
+        public RS232Server(SerialPort port) : base(port) { }
+
         public override void StartServer()
         {
             StopServer();
-            Incoming.Clear();
-            Outgoing.Clear();
 
-            _isRunning = true;
+            Incoming = new ThreadSafeQueue<byte>();
+            Outgoing = new ThreadSafeQueue<byte>();
+
             Port.Open();
+            _isRunning = true;
+
             Reader = Task.Run((Action)ReaderProcess);
             Writer = Task.Run((Action)WriterProcess);
+            
+            Reader.Start();
+            Writer.Start();
         }
 
         public override void StopServer()
@@ -62,8 +63,14 @@ namespace SerialCommunications
         {
             if (arr == null)
                 return;
-            foreach (var item in arr)
-                Write(item);
+
+            for (var i = 0; i < arr.Length; ++i)
+                Write(arr[i]);
+        }
+
+        public void ClearIncoming()
+        {
+            Incoming.Clear();
         }
 
         public byte Read()

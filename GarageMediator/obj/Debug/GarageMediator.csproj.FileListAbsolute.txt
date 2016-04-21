@@ -23,7 +23,6 @@ C:\Users\jmelcher\Downloads\GarageITron\GarageMediator\obj\Debug\GarageMediator.
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GarageMediator.dll
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GarageMediator.pdb
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GenericContainers.dll
-C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\SerialCommunications.dll
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GarageModel.pdb
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GenericContainers.pdb
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\SerialCommunications.pdb

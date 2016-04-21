@@ -23,7 +23,7 @@ namespace SerialCommunications
         private ThreadSafeQueue<byte> Incoming { get; set; } = new ThreadSafeQueue<byte>();
         private RFIDTransmissionState State { get; set; } = RFIDTransmissionState.Waiting;
 
-        public event Action<string> OnIDScan;
+        internal event Action<string> OnIDScan;
 
         public void Read(byte read)
         {
