@@ -31,7 +31,7 @@ namespace SerialCommunications
                     builder.BaudRate = 2400;
                     return new Parallax28140Server(builder.GetSerialPort());
                 default:
-                    throw new ArgumentException();
+                    throw new NotSupportedException();
             }
         }
     }

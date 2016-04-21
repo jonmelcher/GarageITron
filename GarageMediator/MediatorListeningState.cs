@@ -21,13 +21,9 @@ namespace GarageMediator
         // event to propogate upwards when a valid RFID tag has been scanned
         public static event Action<object, string> IDScanned;
 
-        // current ID being scanned to guard against multiple scans of the same tag
-        public string CurrentID { get; set; }
-
         // constructor - sets up _worker task using context
         public MediatorListeningState(GarageMediator context)
         {
-            CurrentID = string.Empty;
             context.RFIDCommunication.OnIDScan += RFIDCommunication_OnIDScan;
         }
 
@@ -39,10 +35,6 @@ namespace GarageMediator
 
         private void RFIDCommunication_OnIDScan(string id)
         {
-            if (string.IsNullOrWhiteSpace(id) || CurrentID != null)
-                return;
-
-            CurrentID = id;
             IDScanned(this, id);
         }
     }

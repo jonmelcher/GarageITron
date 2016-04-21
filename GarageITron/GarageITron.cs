@@ -65,7 +65,7 @@ namespace GarageITron
         {
             if (assignment == null) //information == null)
             {
-                _mediator.RequestClearID();
+                _mediator.ClearID();
                 return;
             }
 
@@ -143,7 +143,7 @@ namespace GarageITron
         private void rescanUI_Click(object sender, EventArgs e)
         {
             _scanned = null;
-            _mediator.RequestClearID();
+            _mediator.ClearID();
             UpdateSystemStatus();
         }
 

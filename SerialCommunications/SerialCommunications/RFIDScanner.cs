@@ -7,6 +7,7 @@
 // ********************************************************************
 
 
+using System;
 using System.Linq;
 using GenericContainers;
 
@@ -19,9 +20,10 @@ namespace SerialCommunications
         private const byte STOP_TRANSMISSION = 0x0D;
         private const byte TRANSMISSION_LENGTH = 10;
 
-        public string CurrentScan { get; set; } = string.Empty;
         private ThreadSafeQueue<byte> Incoming { get; set; } = new ThreadSafeQueue<byte>();
         private RFIDTransmissionState State { get; set; } = RFIDTransmissionState.Waiting;
+
+        internal event Action<string> OnIDScan;
 
         public void Read(byte read)
         {
@@ -29,12 +31,6 @@ namespace SerialCommunications
                 ProcessRead(read);
             else if (read == START_TRANSMISSION)
                 State = RFIDTransmissionState.Collecting;
-        }
-        
-        public void Clear()
-        {
-            CurrentScan = string.Empty;
-            Incoming.Clear();
         }
 
         private void ProcessRead(byte read)
@@ -57,7 +53,7 @@ namespace SerialCommunications
         {
             var transmission = Incoming.EmptyIntoArray();
             if (IsValidTransmission(transmission))
-                CurrentScan = GetTransmissionString(transmission);
+                OnIDScan(GetTransmissionString(transmission));
             State = RFIDTransmissionState.Waiting;
         }
 

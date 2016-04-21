@@ -74,10 +74,9 @@ namespace GarageMediator
             State.Change(this);
         }
 
-        public void RequestClearID()
+        public void ClearID()
         {
-            if (State is MediatorListeningState)
-                (State as MediatorListeningState).CurrentID = string.Empty;
+            RFIDCommunication.ClearScan();
         }
 
         public void RequestProcessVehicle(GarageAssignment assignment)

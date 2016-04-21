@@ -22,9 +22,9 @@ namespace SerialCommunications
         private const int DEFAULT_DELAY_MS = 10;
         private RFIDScanner Scanner { get; set; }
 
-        public string CurrentID => Scanner.CurrentScan;
+        public string CurrentID { get; private set; }
 
-        public Parallax28140Server(SerialPort port) : base(port) { }
+        internal Parallax28140Server(SerialPort port) : base(port) { }
 
         public event Action<string> OnIDScan;
 
@@ -32,6 +32,7 @@ namespace SerialCommunications
         {
             StopServer();
             Scanner = new RFIDScanner();
+            Scanner.OnIDScan += Scanner_OnIDScan;
             Port.Open();
             _isRunning = true;
             Reader = new Task(ReaderProcess);
@@ -44,6 +45,19 @@ namespace SerialCommunications
             Port.Close();
         }
 
+        public void ClearScan()
+        {
+            CurrentID = string.Empty;
+        }
+
+        private void Scanner_OnIDScan(string obj)
+        {
+            if (string.IsNullOrEmpty(CurrentID))
+                return;
+            CurrentID = obj;
+            OnIDScan(CurrentID);
+        }
+
         private void ReaderProcess()
         {
             while (_isRunning)
@@ -51,19 +65,12 @@ namespace SerialCommunications
                 try
                 {
                     byte read = (byte)Port.ReadChar();
-                    if (CurrentID != string.Empty)
-                        continue;
                     Scanner.Read(read);
                 }
                 catch (TimeoutException) { }
 
                 Thread.Sleep(DEFAULT_DELAY_MS);
             }
-        }
-
-        public void ClearScanner()
-        {
-            Scanner.Clear();
         }
     }
 }

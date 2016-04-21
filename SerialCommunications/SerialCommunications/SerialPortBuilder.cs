@@ -11,7 +11,7 @@ using System.IO.Ports;
 
 namespace SerialCommunications
 {
-    public class SerialPortBuilder
+    internal class SerialPortBuilder
     {
         private const int DEFAULT_DELAY_MS = 500;
         private const string DEFAULT_PORT_NAME = "COM1";
