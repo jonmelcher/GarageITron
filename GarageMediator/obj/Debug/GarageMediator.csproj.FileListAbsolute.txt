@@ -30,3 +30,4 @@ C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\SerialCommunicati
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\obj\Debug\GarageMediator.csprojResolveAssemblyReference.cache
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\obj\Debug\GarageMediator.dll
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\obj\Debug\GarageMediator.pdb
+C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GarageModel.dll

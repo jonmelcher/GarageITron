@@ -63,8 +63,9 @@ namespace GarageITron
 
         private void _mediator_IDScanned(object sender, GarageAssignment assignment, VehicleInformation information)
         {
-            if (assignment == null) //information == null)
+            if (assignment == null || information == null)
             {
+                System.Diagnostics.Debug.WriteLine("Database record retrieval failed!");
                 _mediator.ClearID();
                 return;
             }
@@ -73,7 +74,7 @@ namespace GarageITron
             vehicleInformationUI.Items.Clear();
             vehicleInformationUI.Items.AddRange(new object[]
             {
-                assignment
+                assignment, information
             });
 
             Invoke((MethodInvoker)(() =>
