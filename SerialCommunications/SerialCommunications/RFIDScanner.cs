@@ -14,7 +14,7 @@ using GenericContainers;
 
 namespace SerialCommunications
 {
-    public sealed class RFIDScanner
+    internal sealed class RFIDScanner
     {
         private const byte START_TRANSMISSION = 0x0A;
         private const byte STOP_TRANSMISSION = 0x0D;
@@ -23,7 +23,7 @@ namespace SerialCommunications
         private ThreadSafeQueue<byte> Incoming { get; set; } = new ThreadSafeQueue<byte>();
         private RFIDTransmissionState State { get; set; } = RFIDTransmissionState.Waiting;
 
-        internal event Action<string> OnIDScan;
+        public event Action<string> OnIDScan;
 
         public void Read(byte read)
         {

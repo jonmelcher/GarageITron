@@ -20,13 +20,21 @@ namespace SerialCommunications
     public sealed class Parallax28140Server : SerialPortServer
     {
         private const int DEFAULT_DELAY_MS = 10;
-        private RFIDScanner Scanner { get; set; }
 
         public string CurrentID { get; private set; }
+        private RFIDScanner Scanner { get; set; }
 
         internal Parallax28140Server(SerialPort port) : base(port) { }
 
         public event Action<string> OnIDScan;
+
+        private void Scanner_OnIDScan(string obj)
+        {
+            if (string.IsNullOrEmpty(CurrentID))
+                return;
+            CurrentID = obj;
+            OnIDScan(CurrentID);
+        }
 
         public override void StartServer()
         {
@@ -48,14 +56,6 @@ namespace SerialCommunications
         public void ClearScan()
         {
             CurrentID = string.Empty;
-        }
-
-        private void Scanner_OnIDScan(string obj)
-        {
-            if (string.IsNullOrEmpty(CurrentID))
-                return;
-            CurrentID = obj;
-            OnIDScan(CurrentID);
         }
 
         private void ReaderProcess()
