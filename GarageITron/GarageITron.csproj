@@ -33,15 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GarageMediator">
-      <HintPath>..\GarageMediator\bin\Debug\GarageMediator.dll</HintPath>
-    </Reference>
-    <Reference Include="GarageModel">
-      <HintPath>..\GarageMediator\bin\Debug\GarageModel.dll</HintPath>
-    </Reference>
-    <Reference Include="GenericContainers">
-      <HintPath>..\GarageMediator\bin\Debug\GenericContainers.dll</HintPath>
-    </Reference>
     <Reference Include="SerialCommunications">
       <HintPath>..\GarageMediator\bin\Debug\SerialCommunications.dll</HintPath>
     </Reference>

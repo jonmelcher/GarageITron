@@ -2,3 +2,4 @@ C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\bin\Debug\GarageMo
 C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.pdb
 C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.dll
 C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.pdb
+C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.csprojResolveAssemblyReference.cache

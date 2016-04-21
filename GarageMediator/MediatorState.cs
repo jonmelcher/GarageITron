@@ -7,7 +7,6 @@
 
 
 using GarageModel;
-using System;
 
 
 namespace GarageMediator
@@ -17,10 +16,7 @@ namespace GarageMediator
         public abstract void Change(GarageMediator context);
         public abstract string Status { get; }
 
-        public virtual void ProcessVehicle(GarageAssignment assignment)
-        {
-            throw new InvalidOperationException();
-        }
+        public virtual void ProcessVehicle(GarageAssignment assignment) { }
 
         public virtual void Kill(GarageMediator context)
         {

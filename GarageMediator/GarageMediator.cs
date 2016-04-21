@@ -75,8 +75,7 @@ namespace GarageMediator
 
         public void RequestProcessVehicle(GarageAssignment assignment)
         {
-            if (State is MediatorProcessingState)
-                (State as MediatorProcessingState).ProcessVehicle(assignment);
+            State.ProcessVehicle(assignment);
         }
 
         public void Kill()
