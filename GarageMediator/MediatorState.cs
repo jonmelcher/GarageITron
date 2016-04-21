@@ -15,6 +15,7 @@ namespace GarageMediator
     internal abstract class MediatorState
     {
         public abstract void Change(GarageMediator context);
+        public abstract string Status { get; }
 
         public virtual void ProcessVehicle(GarageAssignment assignment)
         {

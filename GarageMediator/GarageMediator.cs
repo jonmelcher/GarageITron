@@ -34,15 +34,9 @@ namespace GarageMediator
             State = new MediatorReadyState();
         }
 
-        public string GetStatus()
+        public string RequestStatus()
         {
-            if (State is MediatorKilledState)
-                return "Disconnected.";
-            if (State is MediatorReadyState)
-                return "Ready to Start.";
-            if (State is MediatorListeningState)
-                return "Listening for RFID Tag.";
-            return "Waiting for User Input.";
+            return State.Status;
         }
 
         // event to propogate upwards when an RFID tag is scanned

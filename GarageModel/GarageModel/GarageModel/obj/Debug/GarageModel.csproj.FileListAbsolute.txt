@@ -1,0 +1,5 @@
+C:\Users\jmelcher\Desktop\GarageModel\GarageModel\bin\Debug\GarageModel.dll
+C:\Users\jmelcher\Desktop\GarageModel\GarageModel\bin\Debug\GarageModel.pdb
+C:\Users\jmelcher\Desktop\GarageModel\GarageModel\obj\Debug\GarageModel.csprojResolveAssemblyReference.cache
+C:\Users\jmelcher\Desktop\GarageModel\GarageModel\obj\Debug\GarageModel.dll
+C:\Users\jmelcher\Desktop\GarageModel\GarageModel\obj\Debug\GarageModel.pdb

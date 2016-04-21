@@ -10,9 +10,9 @@
 
 
 using System;
-using System.Threading.Tasks;
 using System.IO.Ports;
 using System.Threading;
+using System.Threading.Tasks;
 
 
 namespace SerialCommunications

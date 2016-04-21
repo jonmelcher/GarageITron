@@ -9,10 +9,15 @@
 // *******************************************************************************************
 
 
+using System;
+
+
 namespace GarageMediator
 {
     internal sealed class MediatorKilledState : MediatorState
     {
+        public override string Status => "Disconnected.";
+
         public override void Change(GarageMediator context)
         {
             context.State = new MediatorReadyState();

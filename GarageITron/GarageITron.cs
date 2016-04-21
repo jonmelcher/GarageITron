@@ -93,7 +93,7 @@ namespace GarageITron
 
         private void UpdateSystemStatus()
         {
-            systemStatusUI.Text = $"System Status: {_mediator.GetStatus()}";
+            systemStatusUI.Text = $"System Status: {_mediator.RequestStatus()}";
         }
 
         private void startServersUI_Click(object sender, EventArgs e)

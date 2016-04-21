@@ -18,6 +18,8 @@ namespace GarageMediator
 {
     internal sealed class MediatorListeningState : MediatorState
     {
+        public override string Status => "Listening for RFID Tag.";
+
         // event to propogate upwards when a valid RFID tag has been scanned
         public static event Action<object, string> IDScanned;
 

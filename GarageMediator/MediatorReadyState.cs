@@ -12,6 +12,8 @@ namespace GarageMediator
 {
     internal sealed class MediatorReadyState : MediatorState
     {
+        public override string Status => "Ready to Start.";
+
         // GarageMediator will request to start the servers, which will be granted
         // and its state moved into the listening state
         public override void Change(GarageMediator context)

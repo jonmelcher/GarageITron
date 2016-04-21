@@ -36,6 +36,8 @@ namespace GarageMediator
         // requires GarageMediator context to be constructed so is initialized in constructor
         private Action<GarageAssignment> _Process;
 
+        public override string Status => "Waiting for User Input.";
+
         // event to propogate upwards when a vehicle has finished being processed by the microcontroller
 
         public static event Action VehicleInstructionsStarted;

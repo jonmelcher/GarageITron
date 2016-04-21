@@ -1,9 +1,4 @@
-C:\Users\jmelcher1\Desktop\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.dll
-C:\Users\jmelcher1\Desktop\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.pdb
-C:\Users\jmelcher1\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.dll
-C:\Users\jmelcher1\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.pdb
-C:\Users\jmelcher\Downloads\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.dll
-C:\Users\jmelcher\Downloads\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.pdb
-C:\Users\jmelcher\Downloads\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.dll
-C:\Users\jmelcher\Downloads\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.pdb
-C:\Users\jmelcher\Downloads\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.csprojResolveAssemblyReference.cache
+C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.dll
+C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\bin\Debug\GarageModel.pdb
+C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.dll
+C:\Users\jmelcher\Desktop\GarageITron\GarageModel\GarageModel\obj\Debug\GarageModel.pdb
