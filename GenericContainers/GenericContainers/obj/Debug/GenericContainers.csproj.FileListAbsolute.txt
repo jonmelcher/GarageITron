@@ -1,0 +1,9 @@
+C:\Users\jmelcher1\Desktop\GarageITron\GenericContainers\GenericContainers\bin\Debug\GenericContainers.dll
+C:\Users\jmelcher1\Desktop\GarageITron\GenericContainers\GenericContainers\bin\Debug\GenericContainers.pdb
+C:\Users\jmelcher1\Desktop\GarageITron\GenericContainers\GenericContainers\obj\Debug\GenericContainers.dll
+C:\Users\jmelcher1\Desktop\GarageITron\GenericContainers\GenericContainers\obj\Debug\GenericContainers.pdb
+C:\Users\jmelcher\Downloads\GarageITron\GenericContainers\GenericContainers\bin\Debug\GenericContainers.dll
+C:\Users\jmelcher\Downloads\GarageITron\GenericContainers\GenericContainers\bin\Debug\GenericContainers.pdb
+C:\Users\jmelcher\Downloads\GarageITron\GenericContainers\GenericContainers\obj\Debug\GenericContainers.csprojResolveAssemblyReference.cache
+C:\Users\jmelcher\Downloads\GarageITron\GenericContainers\GenericContainers\obj\Debug\GenericContainers.dll
+C:\Users\jmelcher\Downloads\GarageITron\GenericContainers\GenericContainers\obj\Debug\GenericContainers.pdb
