@@ -4,3 +4,4 @@ C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\
 C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\bin\Debug\GenericContainers.pdb
 C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.dll
 C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.pdb
+C:\Users\jmelcher\Desktop\GarageITron\SerialCommunications\SerialCommunications\obj\Debug\SerialCommunications.csprojResolveAssemblyReference.cache

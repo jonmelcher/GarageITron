@@ -57,7 +57,7 @@ namespace SerialCommunications
             Port.Close();
         }
 
-        public void ClearID()
+        public void ClearScan()
         {
             CurrentID = string.Empty;
         }

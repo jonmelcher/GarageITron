@@ -36,7 +36,8 @@
     <Reference Include="GenericContainers">
       <HintPath>..\GenericContainers\GenericContainers\bin\Debug\GenericContainers.dll</HintPath>
     </Reference>
-    <Reference Include="SerialCommunications">
+    <Reference Include="SerialCommunications, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SerialCommunications\SerialCommunications\bin\Debug\SerialCommunications.dll</HintPath>
     </Reference>
     <Reference Include="System" />

@@ -30,3 +30,4 @@ C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\obj\Debug\GarageMediator.cs
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\obj\Debug\GarageMediator.dll
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\obj\Debug\GarageMediator.pdb
 C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\GarageModel.dll
+C:\Users\jmelcher\Desktop\GarageITron\GarageMediator\bin\Debug\SerialCommunications.dll
